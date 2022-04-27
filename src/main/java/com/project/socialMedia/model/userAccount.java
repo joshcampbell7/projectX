@@ -1,14 +1,22 @@
 package com.project.socialMedia.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "Users")
 public class userAccount {
+    @Id
     private String userID;
-    private String firstName;
-    private String lastName;
+    private String firstname;
+    private String lastname;
     private String username;
     private String email;
+    private String password;
     private String yearsOfExperience;
     private String imgLink;
+    private String linkedin;
 
 
     public String getUserID() {
@@ -19,20 +27,20 @@ public class userAccount {
         this.userID = userID;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getLastname() {
+        return lastname;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
 
     public String getUsername() {
@@ -47,12 +55,28 @@ public class userAccount {
         return email;
     }
 
+    public String getLinkedin() {
+        return linkedin;
+    }
+
+    public void setLinkedin(String linkedin) {
+        this.linkedin = linkedin;
+    }
+
     public void setEmail(String email) {
         this.email = email;
     }
 
     public String getYearsOfExperience() {
         return yearsOfExperience;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public void setYearsOfExperience(String yearsOfExperience) {
@@ -71,12 +95,14 @@ public class userAccount {
     public String toString() {
         return "userAccount{" +
                 "userID='" + userID + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
+                ", firstName='" + firstname + '\'' +
+                ", lastName='" + lastname + '\'' +
                 ", username='" + username + '\'' +
                 ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
                 ", yearsOfExperience='" + yearsOfExperience + '\'' +
                 ", imgLink='" + imgLink + '\'' +
+                ", linkedin='" + linkedin + '\'' +
                 '}';
     }
 }
