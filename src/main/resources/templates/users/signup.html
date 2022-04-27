@@ -41,6 +41,15 @@
                 <span th:if="${#fields.hasErrors('password2')}" th:errors="*{password2}" ></span>
             </div>
 
+            <div>
+                <select>
+                    <option>less than 1</option>
+                    <option>1-2 years</option>
+                    <option>2-4 years</option>
+                    <option>4+ years</option>
+                </select>
+            </div>
+
 
             <button type="submit" >Sign Up</button>
         </form>

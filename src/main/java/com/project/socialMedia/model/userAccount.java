@@ -8,6 +8,7 @@ public class userAccount {
     private String username;
     private String email;
     private String yearsOfExperience;
+    private String imgLink;
 
 
     public String getUserID() {
@@ -58,6 +59,14 @@ public class userAccount {
         this.yearsOfExperience = yearsOfExperience;
     }
 
+    public String getImgLink() {
+        return imgLink;
+    }
+
+    public void setImgLink(String imgLink) {
+        this.imgLink = imgLink;
+    }
+
     @Override
     public String toString() {
         return "userAccount{" +
@@ -67,6 +76,7 @@ public class userAccount {
                 ", username='" + username + '\'' +
                 ", email='" + email + '\'' +
                 ", yearsOfExperience='" + yearsOfExperience + '\'' +
+                ", imgLink='" + imgLink + '\'' +
                 '}';
     }
 }
