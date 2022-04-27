@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th = "http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>New User</title>
 </head>
 <body>
 <body>
 <div class="container">
     <div class="form">
-        <form method="POST" th:action="@{/createAccount}" th:object="${userSignup}" id="signup-form">
+        <form method="POST" th:action="@{/user/signup}" th:object="${userSignup}" id="signup-form">
             <h2>Create account</h2>
             <div>
                 <input th:field="*{firstname}" id="firstname" placeholder="Firstname"/>
@@ -37,8 +37,17 @@
             </div>
 
             <div>
-                <input th:field="*{password2}"   id="password2" placeholder="re-enter password" type="password"/>
-                <span th:if="${#fields.hasErrors('password2')}" th:errors="*{password2}" ></span>
+                <input th:field="*{repassword}"   id="password2" placeholder="re-enter password" type="password"/>
+                <span th:if="${#fields.hasErrors('repassword')}" th:errors="*{repassword}" ></span>
+            </div>
+
+            <div>
+                <label for="YoE">Years of experience of coding:</label>
+                <select id="YoE" th:field="*{yearsOfExperience}">
+                    <option th:value="'1-2'">1-2</option>
+                    <option th:value="'2-4'">2-4</option>
+                    <option th:value="'4+'">4+</option>
+                </select>
             </div>
 
 
@@ -46,7 +55,7 @@
         </form>
 
     </div> <br> <br>
-    <a th:href="@{/home}">Click to go back to the home page</a>
+    <a th:href="@{/}">Click to go back to the home page</a>
 </div>
 
 </body>
